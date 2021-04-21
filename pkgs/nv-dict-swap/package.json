@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nv-dict-key-of": "^1.0.0"
+  },
+  "name": "nv-dict-swap",
+  "description": "nv-dict-swap ============ - nv-dict-swap",
+  "version": "1.0.1",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

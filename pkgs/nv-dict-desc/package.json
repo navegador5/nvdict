@@ -1,0 +1,11 @@
+{
+  "name": "nv-dict-desc",
+  "version": "1.0.1",
+  "description": "nv-dict-desc ============ - nv-dict-desc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

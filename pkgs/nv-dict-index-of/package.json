@@ -1,0 +1,18 @@
+{
+  "name": "nv-dict-index-of",
+  "version": "1.0.1",
+  "description": "nv-dict-index-of ============ - nv-dict-index-of",
+  "main": "index.js",
+  "dependencies": {
+    "nv-array-collection": "^1.0.0",
+    "nv-dict-basic": "^1.0.2",
+    "nv-dict-desc": "^1.0.0",
+    "nv-dict-init": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

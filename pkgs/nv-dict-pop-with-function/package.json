@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nv-dict-basic": "^1.0.5"
+  },
+  "name": "nv-dict-pop-with-function",
+  "description": "nv-dict-pop-with-function ============ - nv-dict-pop-with-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "nv-dict-proposition",
+  "version": "1.0.0",
+  "description": "nv-dict-proposition ===================== - nv-dict-proposition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nv-array-basic": "^1.0.14",
+    "nv-dict-basic": "^1.0.2"
+  },
+  "devDependencies": {}
+}

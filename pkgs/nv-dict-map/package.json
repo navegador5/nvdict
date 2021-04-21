@@ -1,0 +1,26 @@
+{
+  "name": "nv-dict-map",
+  "version": "1.0.1",
+  "description": "map-on-object,key-map,value-map",
+  "main": "index.js",
+  "dependencies": {
+    "nv-array-basic": "^1.0.14",
+    "nv-array-combo": "^1.0.0",
+    "nv-dict-basic": "^1.0.4",
+    "nv-facutil-basic": "^1.0.9",
+    "nv-facutil-param": "^1.0.0",
+    "nv-facutil-reparams": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dict-map",
+    "object-map",
+    "key-map",
+    "value-map"
+  ],
+  "author": "",
+  "license": "ISC"
+}

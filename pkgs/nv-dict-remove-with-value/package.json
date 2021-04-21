@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nv-dict-basic": "^1.0.5",
+    "nv-dict-pop-with-value": "^1.0.1"
+  },
+  "name": "nv-dict-remove-with-value",
+  "description": "nv-dict-remove-with-value ============ - nv-dict-remove-with-value",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

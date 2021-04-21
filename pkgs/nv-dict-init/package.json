@@ -1,0 +1,15 @@
+{
+  "name": "nv-dict-init",
+  "version": "1.0.0",
+  "description": "nv-dict-init ============ - nv-dict-init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dict",
+    "init"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "nvdict",
+  "version": "1.0.7",
+  "description": "simple dict tools - only install which you needed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dict",
+    "util"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nv-dict-basic": "^1.0.7",
+    "nv-dict-collection": "^1.0.0",
+    "nv-dict-combo": "^1.0.0",
+    "nv-dict-compare": "^1.0.0",
+    "nv-dict-desc": "^1.0.0",
+    "nv-dict-find": "^1.0.0",
+    "nv-dict-find-index": "^1.0.0",
+    "nv-dict-find-key": "^1.0.0",
+    "nv-dict-find-value": "^1.0.0",
+    "nv-dict-findik": "^1.0.0",
+    "nv-dict-findikv": "^1.0.0",
+    "nv-dict-findiv": "^1.0.0",
+    "nv-dict-findkv": "^1.0.0",
+    "nv-dict-group": "^1.0.0",
+    "nv-dict-index-of": "^1.0.1",
+    "nv-dict-init": "^1.0.0",
+    "nv-dict-key-of": "^1.0.0",
+    "nv-dict-map": "^1.0.1",
+    "nv-dict-pop-with-function": "^1.0.0",
+    "nv-dict-pop-with-value": "^1.0.1",
+    "nv-dict-proposition": "^1.0.0",
+    "nv-dict-remove-with-function": "^1.0.0",
+    "nv-dict-remove-with-value": "^1.0.0",
+    "nv-dict-replace-with-function": "^1.0.0",
+    "nv-dict-replace-with-value": "^1.0.0",
+    "nv-dict-setter": "^1.0.0",
+    "nv-dict-smirror": "^1.0.0",
+    "nv-dict-sort": "^1.0.0",
+    "nv-dict-swap": "^1.0.1",
+    "nv-facutil-basic": "^1.0.36"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1"
+  }
+}

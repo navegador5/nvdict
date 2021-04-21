@@ -1,0 +1,16 @@
+{
+  "name": "nv-dict-combo",
+  "version": "1.0.0",
+  "description": "nv-dict-combo ============ - nv-dict-combo",
+  "main": "index.js",
+  "dependencies": {
+    "nv-array-combo": "^1.0.0",
+    "nv-dict-basic": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

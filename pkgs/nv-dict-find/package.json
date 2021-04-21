@@ -1,0 +1,16 @@
+{
+  "name": "nv-dict-find",
+  "version": "1.0.0",
+  "description": "nv-dict-find ============ - nv-dict-find",
+  "main": "index.js",
+  "dependencies": {
+    "nv-dict-basic": "^1.0.2",
+    "nv-dict-desc": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

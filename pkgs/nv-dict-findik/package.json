@@ -1,0 +1,15 @@
+{
+  "name": "nv-dict-findik",
+  "version": "1.0.0",
+  "description": "nv-dict-findik ============ - nv-dict-findik",
+  "main": "index.js",
+  "dependencies": {
+    "nv-dict-desc": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
