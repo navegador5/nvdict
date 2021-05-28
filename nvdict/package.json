@@ -1,6 +1,6 @@
 {
   "name": "nvdict",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "simple dict tools - only install which you needed",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nv-dict-basic": "^1.0.7",
+    "nv-dict-basic": "^1.0.9",
     "nv-dict-collection": "^1.0.0",
     "nv-dict-combo": "^1.0.0",
     "nv-dict-compare": "^1.0.0",

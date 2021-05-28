@@ -36,6 +36,13 @@ example
     >
 
 
+    > dict_init.froml('a',100,'b',200)
+    { a: 100, b: 200 }
+    > dict_init.from_kvlist(['a','b'],[100,200])
+    { a: 100, b: 200 }
+    >
+
+
 API
 ====
 
@@ -48,7 +55,9 @@ API
 - dict\_init.empty\_str(...keys)
 - dict\_init.empty\_arr(...keys)
 - dict\_init.empty\_dict(...keys)
-
+- dict\_init.from\_list(l)
+- dict\_init.froml(...args)
+- dict\_init.from\_kvlist(kl,vl)
 
 LICENSE
 =======

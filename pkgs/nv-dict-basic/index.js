@@ -1,3 +1,7 @@
+const ary_bsc   = require("nv-array-basic");
+const {is_int}  = require("nv-facutil-basic");
+
+
 function rm_engine(d,cond_func,...keys) {
     let ks = Object.keys(d);
     for(let k of ks){
@@ -31,6 +35,8 @@ function rm_not(d,...keys) {
     }
     return(rm_engine(d,cond_func,...keys));
 }
+
+
 
 
 
@@ -327,10 +333,309 @@ function msetnx(d,...kvs) {
 }
 
 
+////
+function concat(...ds) {
+    let d = {}
+    ds.forEach(r=>Object.assign(d,r));
+    return(d)
+}
+
+function assign(d,...ds) {
+    ds.forEach(r=>Object.assign(d,r));
+    return(d)
+}
+
+////
+function keyat(d,index) {
+    let ks = Object.keys(d);
+    return(ks[index])
+}
+
+function idxat(d,k) {
+    let ks = Object.keys(d);
+    return(ks.indexOf(k))
+}
+
+function fstk(d) {
+    let ks = Object.keys(d);
+    return(ks[0])
+}
+
+function lstk(d) {
+    let ks = Object.keys(d);
+    return(ks[ks.length-1])
+}
+
+function iget(d,index) {
+    return(d[keyat(d,index)])
+}
+
+function iset(d,index,val) {
+    let k = keyat(d,index)
+    if(k in d) {d[k]=val} else {}
+    return(d)
+}
+
+function idel(d,index) {
+    let k = keyat(d,index)
+    if(k in d) {delete d[k]} else {}
+    return(d)
+} 
+
+function ihas(d,index) {
+    let k = keyat(d,index);
+    return(k in d)
+}
+
+////
+function islice(d,si,ei) {
+    let ks = Object.keys(d);
+    let vs = Object.values(d);
+    si = ary_bsc.uniform_index(ks,si);
+    ei = (ei===undefined)?ks.length:ary_bsc.uniform_index(ks,ei);
+    let nd = {}
+    for(let i=si;i<ei;i++) {nd[ks[i]]=d[ks[i]]}
+    return(nd)
+}
+
+
+function kslice(d,sk,ek) {
+    let ks = Object.keys(d);
+    let vs = Object.values(d);
+    let si = ks.indexOf(sk);
+    let ei = (ek===undefined)?ks.length:ks.indexOf(ek);
+    let nd = {}
+    if(si>=0 && ei>=0) {
+        for(let i=si;i<ei;i++) {nd[ks[i]]=d[ks[i]]}
+    }
+    return(nd)
+}
+
+function _iork_to_i(ks,iork) {
+    if(iork === undefined) {
+        return(ks.length)
+    } else if(is_int(iork)) {
+        return(ary_bsc.uniform_index(ks,iork))
+    } else {
+        return(ks.indexOf(iork))
+    }
+}
+
+function slice(mp,ik0,ik1) {
+    let ks = Object.keys(d);
+    let vs = Object.values(d);
+    let si = _iork_to_i(ks,ik0);
+    let ei = _iork_to_i(ks,ik1);
+    let nd = {}
+    if(si>=0 && ei>=0) {
+        for(let i=si;i<ei;i++) {nd[ks[i]]=d[ks[i]]}
+    }
+    return(nd)
+}
+
+////
+function list(d) {return(Object.entries(d).flat())}
+function from_list(l) {
+    let d = {}
+    for(let i=0;i<l.length-1;i=i+2) {d[l[i]] = l[i+1]}
+    return(d)
+}
+////
+
+function clear_and_tokvlist(d) {
+    let oks = []
+    let ovs = []
+    for(let k in d) {
+        oks.push(k);
+        ovs.push(d[k]);
+        delete d[k]
+    }
+    return([oks,ovs])
+}
+
+function clear_and_cp(d) {
+    let nd ={}
+    for(let k in d) {
+        nd[k] = d[k]
+        delete d[k]
+    }
+    return(nd)
+}
+
+function clear_and_tolist(d) {
+    let l = []
+    for(let k in d) {
+        l.push(k,d[k])
+        delete d[k]
+    }
+    return(l)
+}
+
+
+
+function pop_before(d,iork) {
+    let ks = Object.keys(d);
+    let ei = _iork_to_i(ks,iork);
+    let nd = {}
+    if(ei<=0 || ei>=ks.length) {
+    } else {
+        for(let i=0;i<ei;i++) {
+            nd[ks[i]] = d[ks[i]]
+            delete d[ks[i]]
+        }
+    }
+    return(nd)
+}
+
+function pop_from(d,iork) {
+    let ks = Object.keys(d);
+    let si = _iork_to_i(ks,iork);
+    let nd = {}
+    if(si<=0 || si>=ks.length) {
+    } else {
+        for(let i=si;i<ks.length;i++) {
+            nd[ks[i]] = d[ks[i]]
+            delete d[ks[i]]
+        }
+    }
+    return(nd)
+}
+
+
+function pop_after(d,iork) {
+    let ks = Object.keys(d);
+    let si = _iork_to_i(ks,iork);
+    let nd = {}
+    if(si<=0 || si>=ks.length) {
+    } else {
+        for(let i=si+1;i<ks.length;i++) {
+            nd[ks[i]] = d[ks[i]]
+            delete d[ks[i]]
+        }
+    }
+    return(nd)
+}
+
+function pop_between(d,iork0,iork1) {
+    let ks = Object.keys(d);
+    let si = _iork_to_i(ks,iork0);
+    let ei = _iork_to_i(ks,iork1);
+    let nd = {}
+    if(si<=0 || ei<=0) {
+    } else {
+        for(let i=si;i<ei;i++) {
+            nd[ks[i]] = d[ks[i]]
+            delete d[ks[i]]
+        }
+    }
+    return(nd)
+}
+
+function rm_before(d,iork) {pop_before(d,iork);return(d)}
+function rm_after(d,iork) {pop_after(d,iork);return(d)}
+function rm_between(d,iork0,iork1) {pop_between(d,iork0,iork1);return(d)}
+function rm_from(d,iork) {pop_from(d,iork);return(d)}
+
+
+function push(d,nd) {for(let k in nd) {d[k] = nd[k]};return(d)}
+
+function unshift(d,nd) {
+    let old = clear_and_cp(d)    
+    push(d,nd);
+    push(d,old);
+    return(d)
+}
+
+function pop(d,n=1,iork) {
+    let ks = Object.keys(d);
+    let si;
+    if(iork === undefined) {si=ks.length-1} else {si=_iork_to_i(ks,iork);}
+    let ei = Math.min(ks.length,si+n);
+    let nd = {}
+    for(let i=si;i<ei;i++) {
+        nd[ks[i]] = d[ks[i]]
+        delete d[ks[i]]
+    }
+    return(nd)
+}
+
+function shift(d,n=1) {return(pop(d,n,0))}
+
+function insert_before(d,iork,nd) {
+    let ks = Object.keys(d);
+    let ei = _iork_to_i(ks,iork);  
+    if(ei<=0 || ei>=ks.length) {
+        return(d)
+    } else {
+        let after = pop_after(d,ei-1);
+        push(d,nd);
+        push(d,after);
+        return(d)
+    }
+}
+
+function insert_after(d,iork,nd) {
+    let ks = Object.keys(d);
+    let si = _iork_to_i(ks,iork);
+    si = si+1;
+    if(si<=0 || si>ks.length) {
+        return(d)
+    } else if(si === ks.length) {
+        push(d,nd);
+        return(d)
+    } else{
+        let after = pop_after(d,si);
+        push(d,nd);
+        push(d,after);
+        return(d)
+    }
+}
+
+
+
 module.exports = {
+    ////
+    keyat,
+    idxat,
+    fstk,
+    lstk,
+    iget,
+    iset,
+    idel,
+    ihas,
+    ////
+    concat,
+    assign,
+    ////
+    islice,
+    kslice,
+    slice,
+    ////
+    push,
+    unshift,
+    pop,
+    pop_before,
+    pop_after,
+    pop_between,
+    pop_from,
+    shift,
+    insert_before,
+    insert_after,
+    ////
     clear,
+    clear_and_tokvlist,
+    clear_and_cp,
+    clear_and_tolist,
+    ////
     rm,
     rm_not,
+    rm_before,
+    rm_after,
+    rm_between,
+    rm_from,
+    ////
+    list,
+    from_list,
     ////
     kvlist,
     from_kvlist,

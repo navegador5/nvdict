@@ -1,6 +1,6 @@
 {
   "name": "nv-dict-init",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nv-dict-init ============ - nv-dict-init",
   "main": "index.js",
   "scripts": {

@@ -82,35 +82,76 @@ usage
 
 API
 ====
+- dict\_bsc.list(d)
+- dict\_bsc.from\_list(l)
+
+- dict\_bsc.keyat(d,index)
+- dict\_bsc.idxat(d,key)
+- dict\_bsc.fstk(d)
+- dict\_bsc.lstk(d)
+
+- dict\_bsc.iget(d,index)
+- dict\_bsc.iset(d,index,val)
+- dict\_bsc.idel(d,index)
+- dict\_bsc.ihas(d,index)
+
+- dict\_bsc.assign(orig\_dict,...dicts)
+- dict\_bsc.concat(...dicts)
+
 - dict\_bsc.clear(d)
+- dict\_bsc.clear\_and\_tolist(d)
+- dict\_bsc.clear\_and\_toklist(d)
+- dict\_bsc.clear\_and\_cp(d)
+
 - dict\_bsc.rm(d,...keys)
 - dict\_bsc.rm\_not(d,...keys)
+- dict\_bsc.rm\_before(d,end\_key\_or\_index)
+- dict\_bsc.rm\_after(d,key\_or\_index)        //not-included
+- dict\_bsc.rm\_from(d,key\_or\_index)         //included
+- dict\_bsc.rm\_between(d,start\_key\_or\_index,end\_key\_or\_index)
+
+
+- dict\_bsc.pop(d,count=1,from\_index)
+- dict\_bsc.pop\_before(d,end\_key\_or\_index)
+- dict\_bsc.pop\_after(d,key\_or\_index)        //not-included
+- dict\_bsc.pop\_from(d,key\_or\_index)         //included
+- dict\_bsc.pop\_between(d,start\_key\_or\_index,end\_key\_or\_index)
+
+- dict\_bsc.insert\_before(d,_key\_or\_index,nd)
+- dict\_bsc.insert\_after(d,_key\_or\_index,nd)
+
+
 - dict\_bsc.kvlist(d)
 - dict\_bsc.from\_kvlist(kl,vl)
 - dict\_bsc.klist(d,...keys)
 - dict\_bsc.klist\_not(d,...keys)
 - dict\_bsc.vlist(d,...keys)
 - dict\_bsc.vlist\_not(d,...keys)
+
 - dict\_bsc.some(d,...keys)
 - dict\_bsc.some\_not(d,...keys)
 - dict\_bsc.update(d0,d1)
 - dict\_bsc.update\_only\_exist\_in\_own(d0,d1)
 - dict\_bsc.update\_only\_non\_exist\_in\_own(d0,d1)
+
 - dict\_bsc.length(d)
 - dict\_bsc.eq(d0,d1)
-- dict\_bsc.rekey(d,...ks)
-- dict\_bsc.reval(d,...vs)
+
 - dict\_bsc.to\_map(d)
 - dict\_bsc.to\_wmap(d)
 - dict\_bsc.cp(d)
 - dict\_bsc.gen\_from\_fst(d)
 - dict\_bsc.gen\_from\_lst(d)
+- dict\_bsc.rekey(d,...ks)
+- dict\_bsc.reval(d,...vs)
+
 - dict\_bsc.krekey(d,ok,nk)
 - dict\_bsc.vrekey(d,v,nk)
 - dict\_bsc.getset(d,k,v)
 - dict\_bsc.setnx(d,k,v)
 - dict\_bsc.mset(d,...kvs)
 - dict\_bsc.msetnx(d,...kvs)
+
 
 
 - dict\_init.use(val,...keys) 
