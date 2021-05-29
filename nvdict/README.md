@@ -45,6 +45,9 @@ splitted
 - [npm install nv-dict-group](https://www.npmjs.com/package/nv-dict-group)
 - [npm install nv-dict-smirror](https://www.npmjs.com/package/nv-dict-smirror)
 - [npm install nv-dict-optional](https://www.npmjs.com/package/nv-dict-optional)
+- [npm install nv-dict-filter](https://www.npmjs.com/package/nv-dict-filter)
+
+
 
 usage
 =====
@@ -575,6 +578,8 @@ API
 
 - dict\_opt.gen\_ordered(tem,cfg,with\_placeholder=false,placeholder=null)
 - dict\_opt.ordered(tem,cfg,with\_placeholder=false,placeholder=null)
+
+- dict\_fltr.filter(d,condf=(v,k,i)=>{/.../})
 
 
 LICENSE
