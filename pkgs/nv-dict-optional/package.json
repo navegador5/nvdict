@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nv-array-combo": "^1.0.0",
+    "nv-array-optional": "^1.0.0"
+  },
+  "version": "0.0.2",
+  "name": "nv-dict-optional",
+  "description": "nv-dict-optional ============ - nv-dict-optional",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

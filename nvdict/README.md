@@ -44,7 +44,7 @@ splitted
 - [npm install nv-dict-proposition](https://www.npmjs.com/package/nv-dict-proposition)
 - [npm install nv-dict-group](https://www.npmjs.com/package/nv-dict-group)
 - [npm install nv-dict-smirror](https://www.npmjs.com/package/nv-dict-smirror)
-
+- [npm install nv-dict-optional](https://www.npmjs.com/package/nv-dict-optional)
 
 usage
 =====
@@ -78,6 +78,7 @@ usage
     const dict_prop = require("nv-dict-proposition");
     const dict_grp = require("nv-dict-group");
     const dict_smirr = require("nv-dict-smirr");
+    const dict_opt   = require("nv-dict-optional")
 
 
 API
@@ -390,7 +391,7 @@ API
 - dict\_map.fko\_mapv
 - dict\_map.fv\_mapv
 - dict\_map.fvio\_mapv
-- dict\_map.fvki\_mapv             v
+- dict\_map.fvki\_mapv             
 - dict\_map.fvko\_mapv
 - dict\_map.i\_mapv
 - dict\_map.k\_mapv
@@ -570,6 +571,10 @@ API
 - dict\_smirr.is\_kvmirrable(d)
 - dict\_smirr.vmode\_validate(d,key,value)
 - dict\_smirr.kvmode\_validate(d,key,value)
+
+
+- dict\_opt.gen\_ordered(tem,cfg,with\_placeholder=false,placeholder=null)
+- dict\_opt.ordered(tem,cfg,with\_placeholder=false,placeholder=null)
 
 
 LICENSE

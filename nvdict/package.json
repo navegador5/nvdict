@@ -1,6 +1,6 @@
 {
   "name": "nvdict",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "simple dict tools - only install which you needed",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "nv-dict-init": "^1.0.0",
     "nv-dict-key-of": "^1.0.0",
     "nv-dict-map": "^1.0.1",
+    "nv-dict-optional": "^0.0.2",
     "nv-dict-pop-with-function": "^1.0.0",
     "nv-dict-pop-with-value": "^1.0.1",
     "nv-dict-proposition": "^1.0.0",
