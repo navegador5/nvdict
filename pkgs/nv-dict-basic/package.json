@@ -1,6 +1,6 @@
 {
   "name": "nv-dict-basic",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,6 @@
   "description": "",
   "dependencies": {
     "nv-array-basic": "^1.0.18",
-    "nv-facutil-basic": "^1.0.55"
+    "nv-facutil-basic": "^1.0.59"
   }
 }

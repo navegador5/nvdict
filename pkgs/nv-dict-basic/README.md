@@ -583,6 +583,9 @@ API
 - dict\_bsc.mset(d,...kvs)
 - dict\_bsc.msetnx(d,...kvs)
 
+- dict\_bsc.safe\_get(d,key)
+- dict\_bsc.safe\_set(d,key,value)
+
 
 LICENSE
 =======

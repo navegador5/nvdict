@@ -1,5 +1,5 @@
 const ary_bsc   = require("nv-array-basic");
-const {is_int}  = require("nv-facutil-basic");
+const {is_int,hole,noexist}  = require("nv-facutil-basic");
 
 
 function rm_engine(d,cond_func,...keys) {
@@ -592,6 +592,27 @@ function insert_after(d,iork,nd) {
 }
 
 
+function safe_get(d,key) {
+    if(d.hasOwnProperty(key)) {
+        return(d[key])
+    } else {
+        return(noexist)
+    }
+}
+
+const ERROR_DICT = {
+    key_not_exist:new Error("key_not_exist")
+}
+
+function safe_set(d,key,value) {
+    if(d.hasOwnProperty(key)) {
+        d[key] = value
+    } else {
+        throw(ERROR_DICT.key_not_exist)
+    }
+}
+
+
 
 module.exports = {
     ////
@@ -677,4 +698,9 @@ module.exports = {
     setnx,
     mset,
     msetnx,
+    ////
+    noexist,
+    ERROR_DICT,
+    safe_get,
+    safe_set,
 }

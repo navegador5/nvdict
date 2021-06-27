@@ -25,6 +25,7 @@ const dict_frplc = require("nv-dict-replace-with-function");
 const dict_vrplc = require("nv-dict-replace-with-value");
 const dict_prop = require("nv-dict-proposition");
 const dict_grp = require("nv-dict-group");
+const dict_asgn = require("nv-dict-assign");
 
 module.exports = {
     dict_bsc,
@@ -54,5 +55,6 @@ module.exports = {
     dict_vrplc,
     dict_prop,
     dict_grp,
+    dict_asgn,
 }
 

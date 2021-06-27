@@ -46,7 +46,7 @@ splitted
 - [npm install nv-dict-smirror](https://www.npmjs.com/package/nv-dict-smirror)
 - [npm install nv-dict-optional](https://www.npmjs.com/package/nv-dict-optional)
 - [npm install nv-dict-filter](https://www.npmjs.com/package/nv-dict-filter)
-
+- [npm install nv-dict-assign](https://www.npmjs.com/package/nv-dict-assign)
 
 
 usage
@@ -82,7 +82,7 @@ usage
     const dict_grp = require("nv-dict-group");
     const dict_smirr = require("nv-dict-smirr");
     const dict_opt   = require("nv-dict-optional")
-
+    const dict_asgn  = require("nv-dict-assign")
 
 API
 ====
@@ -581,6 +581,16 @@ API
 
 - dict\_fltr.filter(d,condf=(v,k,i)=>{/.../})
 
+
+- dict\_asgn.add(d0,d1)
+- dict\_asgn.set(d0,d1)
+- dict\_asgn.add\_then\_set\_if\_noexist(d0,d1)
+- dict\_asgn.set\_if\_exist\_else\_add\_then\_set(d0,d1)
+- dict\_asgn.assign(d0,d1)
+- dict\_asgn.set\_if\_exist\_else\_add(d0,d1)
+- dict\_asgn.del\_if\_exist(d0,d1)
+- dict\_asgn.del\_if\_exist\_else\_add(d0,d1)
+- dict\_asgn.del\_if\_exist\_else\_add\_then\_set(d0,d1)
 
 LICENSE
 =======
